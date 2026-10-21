@@ -1,0 +1,68 @@
+Warning message:
+package 'jsonlite' was built under R version 4.6.1 
+                       quantity checks passed max_difference
+         configurations present      1      1              0
+                    page errors      1      1              0
+                  hook wan_mean   6023   6023              0
+                    hook wan_sd   6023   6023              0
+                  hook luo_mean   6023   6023              0
+                    hook shi_sd   4018   4018              0
+       ui scenario and n echoed   6023   6023              0
+                   ui row count   6023   6023              0
+                ui source label  16064  16064              0
+                        ui mean  16064  16064              0
+                          ui SD  16064  16064              0
+                     table text  16064  16064              0
+                   warning text   6023   6023              0
+          hook shi_sd null (C2)   2005   2005              0
+         refusal: no table rows      7      0              0
+ refusal: no exported estimates      7      0              0
+                          TOTAL 106433 106419              0
+FAIL app_original: passed 106419/106433 (largest normalised difference 0.00e+00)
+                       quantity checks passed max_difference
+         configurations present      1      1              0
+                    page errors      1      1              0
+                  hook wan_mean   6023   6023              0
+                    hook wan_sd   6023   6023              0
+                  hook luo_mean   6023   6023              0
+                    hook shi_sd   4018   4018              0
+       ui scenario and n echoed   6023   6023              0
+                   ui row count   6023   6023              0
+                ui source label  16064  16064              0
+                        ui mean  16064  16064              0
+                          ui SD  16064  16064              0
+                     table text  16064  16064              0
+                   warning text   6023   6023              0
+          hook shi_sd null (C2)   2005   2005              0
+         refusal: no table rows      7      7              0
+ refusal: no exported estimates      7      7              0
+                          TOTAL 106433 106433              0
+PASS app_fixed:  106433/106433 (largest normalised difference 0.00e+00)
+                 quantity checks passed max_difference
+ metaBLUE Luo.mean vs app   6023   6023   4.371082e-16
+  metaBLUE Wan.std vs app   6023   6023   0.000000e+00
+                    TOTAL  12046  12046   4.371082e-16
+PASS metaBLUE cross-check: 12046/12046 (largest normalised difference 4.37e-16)
+                 quantity checks passed max_difference
+   configurations present      1      1              0
+              page errors      1      1              0
+            hook wan_mean     58     58              0
+              hook wan_sd     58     58              0
+            hook luo_mean     58     58              0
+              hook shi_sd     58     58              0
+ ui scenario and n echoed     58     58              0
+             ui row count     58     58              0
+          ui source label    174    174              0
+                  ui mean    174    174              0
+                    ui SD    174    174              0
+               table text    174    174              0
+             warning text     58     58              0
+                    TOTAL   1104   1104              0
+PASS worked_fixed:  1104/1104 (largest normalised difference 0.00e+00)
+                 quantity checks passed max_difference
+ metaBLUE Luo.mean vs app     58     58   2.049043e-16
+  metaBLUE Wan.std vs app     58     58   0.000000e+00
+                    TOTAL    116    116   2.049043e-16
+PASS worked_metaBLUE cross-check: 116/116 (largest normalised difference 2.05e-16)
+worked example: 58 study-groups; app-vs-R 1104/1104; app-vs-metaBLUE 116/116; estmeansd QE/BC descriptive
+VALIDATION PASSED

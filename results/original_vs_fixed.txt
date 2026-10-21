@@ -1,0 +1,2 @@
+valid-n configurations identical in original and fixed captures: 6023/6023
+invalid-n configurations (behaviour changed by the fix): 7

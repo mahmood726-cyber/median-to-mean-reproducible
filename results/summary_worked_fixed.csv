@@ -1,0 +1,15 @@
+"quantity","checks","passed","max_difference"
+"configurations present",1,1,0
+"page errors",1,1,0
+"hook wan_mean",58,58,0
+"hook wan_sd",58,58,0
+"hook luo_mean",58,58,0
+"hook shi_sd",58,58,0
+"ui scenario and n echoed",58,58,0
+"ui row count",58,58,0
+"ui source label",174,174,0
+"ui mean",174,174,0
+"ui SD",174,174,0
+"table text",174,174,0
+"warning text",58,58,0
+"TOTAL",1104,1104,0

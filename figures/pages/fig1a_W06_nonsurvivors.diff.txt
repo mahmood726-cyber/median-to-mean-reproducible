@@ -1,0 +1,21 @@
+line 74
+- <option value="C3">C3: Q1, median, Q3 (IQR-only)</option>
++ <option value="C3" selected>C3: Q1, median, Q3 (IQR-only)</option>
+line 81
+- <label><span class="lbl">n</span><input id="n" type="number" step="1" value="50" aria-label="n"></label>
++ <label><span class="lbl">n</span><input id="n" type="number" step="1" value="84" aria-label="n"></label>
+line 82
+- <label><span class="lbl">min (a)</span><input id="a" type="number" step="any" value="2.1" aria-label="min (a)"></label>
++ <label><span class="lbl">min (a)</span><input id="a" type="number" step="any" value="" aria-label="min (a)"></label>
+line 83
+- <label><span class="lbl">Q1</span><input id="q1" type="number" step="any" value="3.5" aria-label="Q1"></label>
++ <label><span class="lbl">Q1</span><input id="q1" type="number" step="any" value="64" aria-label="Q1"></label>
+line 84
+- <label><span class="lbl">median (m)</span><input id="m" type="number" step="any" value="4.8" aria-label="median (m)"></label>
++ <label><span class="lbl">median (m)</span><input id="m" type="number" step="any" value="71" aria-label="median (m)"></label>
+line 85
+- <label><span class="lbl">Q3</span><input id="q3" type="number" step="any" value="6.1" aria-label="Q3"></label>
++ <label><span class="lbl">Q3</span><input id="q3" type="number" step="any" value="80" aria-label="Q3"></label>
+line 86
+- <label><span class="lbl">max (b)</span><input id="b" type="number" step="any" value="9.9" aria-label="max (b)"></label>
++ <label><span class="lbl">max (b)</span><input id="b" type="number" step="any" value="" aria-label="max (b)"></label>

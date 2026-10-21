@@ -1,0 +1,5 @@
+Pillow 13.0.0
+fig1a_W06_nonsurvivors.tif: 2600x1520 px, mode RGB, compression tiff_lzw, dpi (300, 300), print size 22.0 x 12.9 cm, sha256 71b3bdd6a072f7b2 -> OK
+fig1b_W06_survivors.tif: 2600x1520 px, mode RGB, compression tiff_lzw, dpi (300, 300), print size 22.0 x 12.9 cm, sha256 0c3ee927bb884121 -> OK
+fig2_invalid_n.tif: 2600x1240 px, mode RGB, compression tiff_lzw, dpi (300, 300), print size 22.0 x 10.5 cm, sha256 ad1017c69fff5260 -> OK
+ALL OK

@@ -1,0 +1,18 @@
+quantity,checks_before,passed_before,checks_after,passed_after,max_difference_before,max_difference_after,tolerance
+Configurations present (count and identity),1,1,1,1,,,0
+Page script errors,1,1,1,1,,,0
+Wan 2014 mean,6023,6023,6023,6023,0,0,1e-9
+Wan 2014 SD,6023,6023,6023,6023,0,0,1e-9
+Luo 2018 mean,6023,6023,6023,6023,0,0,1e-9
+"Shi 2020 SD (C1, C3)",4018,4018,4018,4018,0,0,1e-9
+Export: scenario and n,6023,6023,6023,6023,,,0
+Result rows (table and export),6023,6023,6023,6023,,,0
+Row source labels,16064,16064,16064,16064,,,0
+Exported means,16064,16064,16064,16064,0,0,1e-9
+Exported SDs,16064,16064,16064,16064,0,0,1e-9
+Displayed table rows (text),16064,16064,16064,16064,,,0
+Warning text,6023,6023,6023,6023,,,0
+No Shi SD for C2,2005,2005,2005,2005,,,0
+Invalid n: no rows displayed,7,0,7,7,,,0
+Invalid n: nothing exported,7,0,7,7,,,0
+TOTAL,106433,106419,106433,106433,,,

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this validation archive, please cite it as below."
+title: "Median-to-mean in the browser: validation of the allmeta median-to-mean app against R (Wan 2014, Luo 2018, Shi 2020; metaBLUE)"
+type: dataset
+version: 1.0.0
+date-released: "<ALLMETA_RELEASE>"
+doi: "<ALLMETA_RELEASE_DOI>"
+license: MIT
+authors:
+  - family-names: Ahmad
+    given-names: Mahmood
+    orcid: "https://orcid.org/0000-0001-9107-3704"
+    affiliation: "Tahir Heart Institute, Rabwah, Pakistan"
+repository-code: "https://github.com/mahmood726-cyber/allmeta"
+keywords: [median, interquartile range, range, mean estimation, standard deviation estimation, meta-analysis, software validation]
+references:
+  - type: software
+    title: "allmeta"
+    version: "<ALLMETA_RELEASE>"
+    doi: "<ALLMETA_RELEASE_DOI>"
