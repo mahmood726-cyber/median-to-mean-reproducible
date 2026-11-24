@@ -1,0 +1,31 @@
+id,scenario,n,a,q1,m,q3,b,purpose
+P01,C1,1000000,1,3,5,7,9,large n (AS241 branch 2)
+P02,C1,1000000000,1,3,5,7,9,large n (AS241 branch 2)
+P03,C1,100000000000,1,3,5,7,9,very large n (AS241 branch 3 for xi)
+P04,C1,1000000000000,1,3,5,7,9,very large n (AS241 branch 3)
+P05,C2,100000000000,1,,5,,9,very large n three-number
+P06,C3,1000000000000,,3,5,7,,very large n IQR
+P07,C1,2,1,2,3,4,5,n = 2
+P08,C2,3,1,,2,,4,n = 3
+P09,C3,4,,1,2,3,,n = 4 (small-n warning)
+P10,C1,4,1,2,3,4,5,n = 4 five-number
+P11,C1,30,2,2,2,5,8,tie a = q1 = m
+P12,C3,30,,4,4,4,,tie q1 = m = q3 (SD 0)
+P13,C2,30,6,,6,,6,tie a = m = b (SD 0)
+P14,C1,25,-12.5,-4.25,-1,3.75,10,negative values
+P15,C1,25,3,2,5,7,9,order violation a > q1
+P16,C2,25,9,,5,,1,order violation a > b
+P17,C3,25,,7,5,3,,order violation q1 > q3
+P18,C1,40,1,,5,7,9,blank q1
+P19,C2,40,,,5,,9,blank a
+P20,C1,50,0.001,0.002,0.003,0.004,0.005,tiny scale
+P21,C1,50,100000,200000,300000,400000,500000,large scale
+P22,C1,0,1,3,5,7,9,invalid n = 0
+P23,C1,-5,1,3,5,7,9,invalid n negative
+P24,C2,1.5,1,,5,,9,invalid n non-integer
+P25,C3,0.2,,3,5,7,,invalid n = 0.2
+P26,C1,,1,3,5,7,9,invalid n blank
+P27,C2,1,1,,5,,9,invalid n = 1
+P28,C3,1,,3,5,7,,invalid n = 1
+P29,C1,7,10.5,12.25,15,18.75,30.5,n = 7 skewed
+P30,C3,13,,0.1,0.35,1.2,,n = 13 skewed IQR

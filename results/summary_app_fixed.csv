@@ -1,0 +1,18 @@
+"quantity","checks","passed","max_difference"
+"configurations present",1,1,0
+"page errors",1,1,0
+"hook wan_mean",6023,6023,0
+"hook wan_sd",6023,6023,0
+"hook luo_mean",6023,6023,0
+"hook shi_sd",4018,4018,0
+"ui scenario and n echoed",6023,6023,0
+"ui row count",6023,6023,0
+"ui source label",16064,16064,0
+"ui mean",16064,16064,0
+"ui SD",16064,16064,0
+"table text",16064,16064,0
+"warning text",6023,6023,0
+"hook shi_sd null (C2)",2005,2005,0
+"refusal: no table rows",7,7,0
+"refusal: no exported estimates",7,7,0
+"TOTAL",106433,106433,0

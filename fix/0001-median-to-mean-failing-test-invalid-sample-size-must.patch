@@ -1,0 +1,86 @@
+From b075b7fb5bf52fafe3dfa161a8f8889417877114 Mon Sep 17 00:00:00 2001
+From: "Claude Opus 5 (lane)" <noreply@anthropic.com>
+Date: Wed, 21 Oct 2026 07:51:30 +0100
+Subject: [PATCH 1/2] =?UTF-8?q?median-to-mean:=20failing=20test=20?=
+ =?UTF-8?q?=E2=80=94=20invalid=20sample=20size=20must=20be=20refused?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+n = 0, -5, 1.5, 0.2, 1 or blank currently yields displayed and exported
+"estimates" (e.g. SD 0.000 for n = 0) although the Wan/Shi formulas are
+undefined there; the normal quantile returns -Inf/+Inf for p outside
+[0, 1] where R's qnorm returns NaN. 19 of 21 checks fail on the page at
+1cb3f84 (allmeta v1.8.0).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+---
+ median-to-mean/tests/invalid-n.test.cjs | 56 +++++++++++++++++++++++++
+ 1 file changed, 56 insertions(+)
+ create mode 100644 median-to-mean/tests/invalid-n.test.cjs
+
+diff --git a/median-to-mean/tests/invalid-n.test.cjs b/median-to-mean/tests/invalid-n.test.cjs
+new file mode 100644
+index 0000000..312dc2f
+--- /dev/null
++++ b/median-to-mean/tests/invalid-n.test.cjs
+@@ -0,0 +1,56 @@
++// invalid-n.test.cjs — the page must refuse a sample size that is not a whole number >= 2.
++//   node median-to-mean/tests/invalid-n.test.cjs      (no dependencies; exit 0 = pass)
++// Runs the page's own inline script in a vm with a minimal DOM stub. Before the fix, n = 0, -5, 1.5, 0.2, 1 or blank
++// produced displayed and exported "estimates" (e.g. SD 0.000 for n = 0) although the Wan/Shi formulas are undefined there
++// (R: qnorm(p) is NaN for p < 0).
++'use strict';
++const fs = require('fs'), path = require('path'), vm = require('vm'), assert = require('assert');
++const html = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
++const inline = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]);
++const engine = inline.find(s => s.includes('__almM2M'));
++assert.ok(engine, 'engine script not found');
++
++function el(id) {
++  const e = { id, value: '', innerHTML: '', textContent: '', children: [], attrs: {}, listeners: {},
++    setAttribute(k, v) { this.attrs[k] = v; }, appendChild(c) { this.children.push(c); return c; },
++    addEventListener(t, f) { (this.listeners[t] = this.listeners[t] || []).push(f); },
++    click() { (this.listeners.click || []).forEach(f => f()); } };
++  Object.defineProperty(e, 'innerHTML', { get() { return this._h || ''; }, set(v) { this._h = v; if (v === '') this.children = []; } });
++  return e;
++}
++const els = {};
++const document = { getElementById: id => (els[id] = els[id] || el(id)),
++  createElement: t => el(t), createElementNS: (ns, t) => el(t) };
++const vals = { scenario: 'C1', n: '50', a: '2.1', q1: '3.5', m: '4.8', q3: '6.1', b: '9.9' };
++for (const [k, v] of Object.entries(vals)) document.getElementById(k).value = v;
++const window = {};
++vm.runInNewContext(engine, { window, document, console, Math, Number, parseFloat });
++
++function run(scenario, n) {
++  els.scenario.value = scenario; els.n.value = n; els['btn-run'].click();
++  return { last: window.__almLastM2M(), rows: els['results-body'].children.length };
++}
++let failures = 0;
++const check = (name, f) => { try { f(); console.log('ok  ', name); } catch (e) { failures++; console.log('FAIL', name, '-', e.message); } };
++
++for (const sc of ['C1', 'C2', 'C3']) for (const n of ['0', '-5', '1.5', '0.2', '1', '']) {
++  check(`${sc} n=${JSON.stringify(n)} is refused`, () => {
++    const r = run(sc, n);
++    assert.strictEqual(r.rows, 0, 'result rows displayed');
++    assert.strictEqual(r.last.refused, true, 'export not marked refused');
++    assert.strictEqual(r.last.estimates.length, 0, 'estimates exported');
++    assert.ok(/whole number/.test(els['warn-slot'].innerHTML), 'no input-check message');
++  });
++}
++check('valid n = 50 still estimates (C1: 3 rows, Wan mean 5.25)', () => {
++  const r = run('C1', '50');
++  assert.strictEqual(r.rows, 3); assert.notStrictEqual(r.last.refused, true);
++  assert.ok(Math.abs(r.last.estimates[0].mean - (2.1 + 7 + 9.6 + 12.2 + 9.9) / 8) < 1e-12);
++});
++check('valid n = 2 estimates with the small-n warning', () => {
++  const r = run('C2', '2'); assert.strictEqual(r.rows, 2); assert.ok(/very small/.test(els['warn-slot'].innerHTML));
++});
++check('normal quantile is NaN outside [0, 1] (as R qnorm)', () => {
++  assert.ok(Number.isNaN(window.__almM2M('C2', 0.2, 1, NaN, 5, NaN, 9).wan.sd));
++});
++if (failures) { console.log(`${failures} failing`); process.exit(1); } else console.log('all passed');
+-- 
+2.56.0.windows.2
+

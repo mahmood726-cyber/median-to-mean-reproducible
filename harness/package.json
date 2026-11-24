@@ -1,0 +1,8 @@
+{
+  "name": "median-to-mean-harness",
+  "private": true,
+  "description": "Runs the archived median-to-mean page in Node.js + jsdom (every page script, in document order) and captures its outputs.",
+  "dependencies": {
+    "jsdom": "25.0.1"
+  }
+}

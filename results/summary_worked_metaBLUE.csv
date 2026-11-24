@@ -1,0 +1,4 @@
+"quantity","checks","passed","max_difference"
+"metaBLUE Luo.mean vs app",58,58,2.0490432275307e-16
+"metaBLUE Wan.std vs app",58,58,0
+"TOTAL",116,116,2.0490432275307e-16
