@@ -82,4 +82,4 @@ MIT for the archive tooling; allmeta is MIT. metamedian's `dat.age` is redistrib
 
 ## Citation
 
-See `CITATION.cff` (`<ALLMETA_RELEASE>` / `<ALLMETA_RELEASE_DOI>` placeholders are filled at release).
+See `CITATION.cff` (allmeta release v1.10.0, DOI 10.5281/zenodo.24515927).

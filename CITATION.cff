@@ -3,8 +3,7 @@ message: "If you use this validation archive, please cite it as below."
 title: "Median-to-mean in the browser: validation of the allmeta median-to-mean app against R (Wan 2014, Luo 2018, Shi 2020; metaBLUE)"
 type: dataset
 version: 1.0.0
-date-released: "<ALLMETA_RELEASE>"
-doi: "<ALLMETA_RELEASE_DOI>"
+date-released: 2026-11-24
 license: MIT
 authors:
   - family-names: Ahmad
@@ -16,5 +15,5 @@ keywords: [median, interquartile range, range, mean estimation, standard deviati
 references:
   - type: software
     title: "allmeta"
-    version: "<ALLMETA_RELEASE>"
-    doi: "<ALLMETA_RELEASE_DOI>"
+    version: "v1.10.0"
+    doi: "10.5281/zenodo.24515927"

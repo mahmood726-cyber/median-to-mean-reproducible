@@ -2,12 +2,12 @@
   "title": "Median-to-mean in the browser: validation of the allmeta median-to-mean app against R (Wan 2014, Luo 2018, Shi 2020; metaBLUE)",
   "upload_type": "dataset",
   "version": "1.0.0",
-  "description": "Validation archive for the allmeta median-to-mean app (allmeta <ALLMETA_RELEASE>, https://doi.org/<ALLMETA_RELEASE_DOI>): app snapshots with SHA-256 sums, pre-registration, seeded corpus, Node.js harness, captured outputs of the original and corrected pages, R reference scripts and the one-command check `Rscript validate.R`.",
+  "description": "Validation archive for the allmeta median-to-mean app (allmeta v1.10.0, https://doi.org/10.5281/zenodo.24515927): app snapshots with SHA-256 sums, pre-registration, seeded corpus, Node.js harness, captured outputs of the original and corrected pages, R reference scripts and the one-command check `Rscript validate.R`.",
   "creators": [{ "name": "Ahmad, Mahmood", "affiliation": "Tahir Heart Institute, Rabwah, Pakistan", "orcid": "0000-0001-9107-3704" }],
   "license": "MIT",
   "keywords": ["median", "interquartile range", "mean and SD estimation", "meta-analysis", "software validation", "R"],
   "related_identifiers": [
     { "identifier": "https://github.com/mahmood726-cyber/allmeta", "relation": "isSupplementTo", "scheme": "url" },
-    { "identifier": "<ALLMETA_RELEASE_DOI>", "relation": "isSupplementTo", "scheme": "doi" }
+    { "identifier": "10.5281/zenodo.24515927", "relation": "isSupplementTo", "scheme": "doi" }
   ]
 }
