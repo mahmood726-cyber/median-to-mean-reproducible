@@ -1,5 +1,5 @@
 {
-  "title": "Median-to-mean in the browser: validation of the allmeta median-to-mean app against R (Wan 2014, Luo 2018, Shi 2020; metaBLUE)",
+  "title": "Median-to-mean in the browser: validation of the allmeta median-to-mean app against R",
   "upload_type": "dataset",
   "version": "1.0.0",
   "description": "Validation archive for the allmeta median-to-mean app (allmeta v1.10.0, https://doi.org/10.5281/zenodo.24515927): app snapshots with SHA-256 sums, pre-registration, seeded corpus, Node.js harness, captured outputs of the original and corrected pages, R reference scripts and the one-command check `Rscript validate.R`.",
